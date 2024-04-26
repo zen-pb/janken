@@ -57,6 +57,8 @@ While playerScore and computerScore is not equal to 3
             Else
                 Display "You lose!"
                 Increment computerScore by one
+        Else
+            Display "Dude, what did you enter?"
 Endwhile
 If the playerScore is greater than computerScore
     Display "Congratulations! You win!"
