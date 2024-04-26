@@ -1,13 +1,20 @@
 # "Janken" - Rock✊, Paper,🖐️ Scissors✌️
-A game where you have a 'Janken' match with a computer that randomly generates its choice (rock, paper, or scissors).
+A game where you have a 'Janken' match with a computer that randomly generates its choice (rock, paper, or scissors) for five rounds. The winner is the first to reach a score of three wins.
 
 ## Description
 "Janken" is essentially the Japanese version of Rock, Paper, Scissors. I chose this name after being inspired by Hunter X Hunter, where the main protagonist, Gon, uses "Janken" as his fighting technique, and also because I'm a fan of anime.
 
+## Features
+- getComputerChoice() function to randomly generate hand for the computer.
+- getPlayerChoice() function to get the player input.
+- Game scores. If either the player or the computer gets a score of 3, the game ends and outputs the winner.
+- playRound() function to play a round of the game inside the;
+- playGame() function to play 5 rounds of game and whoever gets to score of 3 first wins.
+
 ## Problem Solving Approach
 
 ### Understand the Problem
-The player will choose which hand they want to play (rock, paper, or scissors). After the player makes their choice, the program will randomly assign a hand to the computer. Then, the program will compare the player's hand to the computer's hand. If the player chooses rock, they win if the computer's hand is scissors, they lose if the computer's hand is paper, and if both have the same hand, it's a tie. The same rules apply for the other hands: scissors win against paper, paper wins against rock, and rock wins against scissors.
+The player will choose which hand they want to play (rock, paper, or scissors). After the player makes their choice, the program will randomly assign a hand to the computer. Then, the program will compare the player's hand to the computer's hand. If the player chooses rock, they win if the computer's hand is scissors, they lose if the computer's hand is paper, and if both have the same hand, it's a tie. The same rules apply for the other hands: scissors win against paper, paper wins against rock, and rock wins against scissors. This process will repeat for 5 rounds, and the first to reach three wins will be declared the overall winner.
 
 ### Plan
 #### Interface
