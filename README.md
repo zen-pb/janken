@@ -28,25 +28,40 @@ The player will choose which hand they want to play (rock, paper, or scissors). 
 
 #### Pseudocode
 ```
-Player chooses a hand to play
-Randomly generate a hand for the computer
-Compare the player's hand to the computer's hand
-    If the player's hand is the same with the computer's hand
-        Display "Tie!"
-    Else if the player's hand is Rock
-        Check if the computer's hand is Scissors
-            Display "You win!"
-        Else
-            Display "You lose..."
-    Else if the player's hand is Paper
-        Check if the computer's hand is Rock
-            Display "You win!"
-        Else
-            Display "You lose..."
-    Else if the player's hand is Scissors
-        Check if the computer's hand is Paper
-            Display "You win!"
-        Else
-            Display "You lose!"
+Start
+Initialize playerScore and computerScore to 0
+While playerScore and computerScore is not equal to 3
+    Player chooses a hand to play
+    Randomly generate a hand for the computer
+    Compare the player's hand to the computer's hand
+        If the player's hand is the same with the computer's hand
+            Display "Tie!"
+        Else if the player's hand is Rock
+            If the computer's hand is Scissors
+                Display "You win!"
+                Increment playerScore by one
+            Else
+                Display "You lose..."
+                Increment computerScore by one
+        Else if the player's hand is Paper
+            If the computer's hand is Rock
+                Display "You win!"
+                Increment playerScore by one
+            Else
+                Display "You lose..."
+                Increment computerScore by one
+        Else if the player's hand is Scissors
+            If the computer's hand is Paper
+                Display "You win!"
+                Increment playerScore by one
+            Else
+                Display "You lose!"
+                Increment computerScore by one
+Endwhile
+If the playerScore is greater than computerScore
+    Display "Congratulations! You win!"
+Else
+    Display "You lose! Try again..."
+End
 ```
 
