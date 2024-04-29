@@ -1,4 +1,4 @@
-# "Janken" - Rock✊, Paper,🖐️ Scissors✌️
+# "Janken" - Rock✊, Paper,🖐️, Scissors✌️
 A game where you have a 'Janken' match with a computer that randomly generates its choice (rock, paper, or scissors) for five rounds. The winner is the first to reach a score of three wins.
 
 ## Description
