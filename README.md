@@ -18,7 +18,7 @@ The player will choose which hand they want to play (rock, paper, or scissors). 
 
 ### Plan
 #### Interface
-- For now, the program will be accessible through the browser console. However, my ultimate goal is to develop a graphical user interface (GUI) for the final product. Additionally, I plan to introduce a multiplayer mode instead of just playing against a computer with a randomly generated hand. This feature will allow friends to compete against each other, enhancing the fun and interaction within the game.
+- For now, the program will be accessible through the browser console. However, my ultimate goal is to develop a graphical user interface (GUI) for the final product.
 
 #### Input
 - The inputs for the game will consist of the player's choice, represented by numbers since there is no GUI yet. Players will type to the prompt 'rock' for Rock, 'paper' for Paper, and 'scissors' for Scissors.
