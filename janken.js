@@ -67,11 +67,7 @@ function handUI(playerChoice, computerChoice) {
 function roundHandler() {
   gameRound++;
 
-  if (playerScore === 3 || computerScore === 3) {
-    gameRoundText.textContent = "Game Over!";
-    modalVerdict.textContent = scoreCheck();
-    newGame();
-  } else if (playerScore === 2 || computerScore === 2) {
+  if (playerScore === 2 && computerScore === 2) {
     gameRoundText.textContent = "Final Round";
   } else {
     gameRoundText.textContent = "Round " + gameRound;
@@ -105,23 +101,27 @@ function gameLogic(playerChoice, computerChoice) {
   }
 }
 
-function scoreCheck() {
-  if (playerScore < computerScore) {
-    return "You lose...";
-  }
-
-  return "You win!";
-}
-
 function scorePLayerUI() {
   displaySentence.textContent = "You win!";
   playerScore++;
   playerPoints[playerScore - 1].src = "./assets/images/fill.png";
+
+  if (playerScore === 3) {
+    gameRoundText.textContent = "Game Over!";
+    modalVerdict.textContent = "You win!";
+    newGame();
+  }
 }
 
 function scoreComputerUI() {
   computerScore++;
   computerPoints[computerScore - 1].src = "./assets/images/fill.png";
+
+  if (computerScore === 3) {
+    gameRoundText.textContent = "Game Over!";
+    modalVerdict.textContent = "You lose...";
+    newGame();
+  }
 }
 
 function newGame() {
@@ -146,7 +146,11 @@ function reset() {
 
   let score = (scoreReset.src = "./assets/images/empty.png");
 
-  playerPoints.forEach((item) => {
-    playerPoints[item] = score;
+  playerPoints.forEach((img) => {
+    img.src = "./assets/images/empty.png";
+  });
+
+  computerPoints.forEach((img) => {
+    img.src = "./assets/images/empty.png";
   });
 }
