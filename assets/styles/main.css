@@ -21,8 +21,8 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding: 2rem;
-    max-width: 1920px;
+    padding: 3vh 0;
+    max-width: 1632px;
     margin-inline: auto;
 
     img {
@@ -40,14 +40,17 @@ header {
     font-size: 36px;
 }
 
+main {
+    max-width: 1632px;
+    margin-inline: auto;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 450px;
     flex-grow: 0;
-    max-width: 1920px;
-    margin-inline: auto;
 }
 
 .score {
@@ -170,8 +173,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
-    max-width: 1920px;
-    margin-inline: auto;
 }
 
 .choices {
@@ -214,7 +215,7 @@ footer {
     justify-content: center;
     padding: 5px;
     gap: 5px;
-    max-width: 1920px;
+    max-width: 1632px;
     margin-inline: auto;
 
     p {
