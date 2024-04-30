@@ -3,9 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/icon.png" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
     <title>Janken</title>
   </head>
   <body>
+    <header>
+      <img src="./assets/images/icon.png" alt="Janken Logo" />
+      <h1>JANKEN</h1>
+    </header>
+    <main>
+      <div class="game-round">
+        <h2 id="gameRound">Start a round!</h2>
+      </div>
+      <div class="container">
+        <div id="playerPoints" class="score">
+          <img src="./assets/images/empty.png" alt="score" />
+          <img src="./assets/images/empty.png" alt="score" />
+          <img src="./assets/images/empty.png" alt="score" />
+        </div>
+        <div class="player hand">
+          <img
+            id="playerHand"
+            src="./assets/images/rock - left.png"
+            alt="player hand"
+          />
+          <p>Player</p>
+        </div>
+        <dialog class="modal" id="modal">
+          <div class="modal-content">
+            <p id="verdict"></p>
+            <button>Play again</button>
+          </div>
+        </dialog>
+        <div class="versus">
+          <img src="./assets/images/versus.png" alt="versus" />
+        </div>
+        <div class="computer hand">
+          <img
+            id="computerHand"
+            src="./assets/images/rock - right.png"
+            alt="computer hand"
+          />
+          <p>Computer</p>
+        </div>
+        <div id="computerPoints" class="score">
+          <img src="./assets/images/empty.png" alt="score" />
+          <img src="./assets/images/empty.png" alt="score" />
+          <img src="./assets/images/empty.png" alt="score" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="choices">
+          <button id="rock">
+            <img src="./assets/images/rock - right.png" alt="rock" />
+          </button>
+          <button id="paper">
+            <img src="./assets/images/paper - right.png" alt="paper" />
+          </button>
+          <button id="scissors">
+            <img src="./assets/images/scissors - right.png" alt="scissors" />
+          </button>
+        </div>
+        <div class="verdict">
+          <p id="sentence">The game starts as soon as you press a button!</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        zen-pb
+      </p>
+      <a href="https://github.com/zen-pb" target="_blank">
+        <img src="./assets/images/github-mark.png" alt="github" />
+      </a>
+    </footer>
     <script src="janken.js"></script>
   </body>
 </html>
