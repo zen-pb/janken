@@ -177,7 +177,7 @@ header {
     height: 150px;
     width: 150px;
     background-color: #BABFC4;
-    border: 10px solid #0c0d0e;
+    border: 5px solid #0c0d0e;
     border-radius: 25px;
     transition: transform 0.2s ease-in-out;
 
