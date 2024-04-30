@@ -1,5 +1,7 @@
 # "Janken" - Rock✊, Paper,🖐️, Scissors✌️
 
+Play Janken right now: https://zen-pb.github.io/janken/
+
 A game where you have a 'Janken' match with a computer that randomly generates its choice (rock, paper, or scissors) for five rounds. The winner is the first to reach a score of three wins.
 
 ![image](https://github.com/zen-pb/janken/assets/111935236/7348329d-f46f-49c3-8f58-19a29dff2f35)
