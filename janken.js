@@ -2,17 +2,17 @@ let playerScore = 0,
   computerScore = 0,
   gameRound = 0;
 
-const scoreFill = document.createElement("img");
+const scoreReset = document.createElement("img");
 const gameRoundText = document.querySelector("h2");
-const playerPoints = document.querySelector("#playerPoints");
+const playerPoints = document.querySelectorAll("#playerPoints img");
 const playerHand = document.querySelector("#playerHand");
 const modalGameOver = document.querySelector("dialog");
 const modalVerdict = document.querySelector("#verdict");
 const computerHand = document.querySelector("#computerHand");
-const computerPoints = document.querySelector("#computerPoints");
+const computerPoints = document.querySelectorAll("#computerPoints img");
 const displaySentence = document.querySelector("#sentence");
 
-scoreFill.src = "./assets/images/fill.png";
+scoreReset.src = "./assets/images/fill.png";
 
 playGame();
 
@@ -67,11 +67,11 @@ function handUI(playerChoice, computerChoice) {
 function roundHandler() {
   gameRound++;
 
-  if (gameRound === 6) {
+  if (playerScore === 3 || computerScore === 3) {
     gameRoundText.textContent = "Game Over!";
     modalVerdict.textContent = scoreCheck();
     newGame();
-  } else if (gameRound === 5) {
+  } else if (playerScore === 2 || computerScore === 2) {
     gameRoundText.textContent = "Final Round";
   } else {
     gameRoundText.textContent = "Round " + gameRound;
@@ -116,14 +116,12 @@ function scoreCheck() {
 function scorePLayerUI() {
   displaySentence.textContent = "You win!";
   playerScore++;
-  playerPoints.prepend(scoreFill);
-  playerPoints.removeChild(playerPoints.lastChild);
+  playerPoints[playerScore - 1].src = "./assets/images/fill.png";
 }
 
 function scoreComputerUI() {
   computerScore++;
-  computerPoints.prepend(scoreFill);
-  computerPoints.removeChild(computerPoints.lastChild);
+  computerPoints[computerScore - 1].src = "./assets/images/fill.png";
 }
 
 function newGame() {
@@ -145,4 +143,10 @@ function reset() {
   computerHand.src = "./assets/images/rock - right.png";
   displaySentence.textContent =
     "The game starts as soon as you press a button!";
+
+  let score = (scoreReset.src = "./assets/images/empty.png");
+
+  playerPoints.forEach((item) => {
+    playerPoints[item] = score;
+  });
 }
