@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 *,
 *::before,
@@ -7,6 +7,7 @@ a::after {
     margin: 0;
     font-family: "Poppins", sans-serif;
     user-select: none;
+    transition: all 0.5s ease-in-out;
 }
 
 img {
@@ -14,20 +15,20 @@ img {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
     background-color: #D6D9DC;
 }
 
 header {
     display: flex;
     align-items: center;
-    padding: 3vh 0;
     max-width: 1632px;
     margin-inline: auto;
+    padding: 3vh 0;
 
     img {
         width: 100px;
-        height: 100px;
     }
 
     h1 {
@@ -37,7 +38,10 @@ header {
 
 .game-round {
     text-align: center;
+    padding: 1vh;
     font-size: 36px;
+    max-width: 1632px;
+    margin-inline: auto;
 }
 
 main {
@@ -56,8 +60,8 @@ main {
 .score {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-
+    padding: 1vh;
+    gap: 1vh;
 
     img {
         width: 50px;
@@ -76,12 +80,9 @@ main {
 .hand {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 360px;
-    padding: 1rem;
 
     img {
-        width: 185px;
         height: 355px;
         margin: 0 auto;
     }
@@ -93,11 +94,19 @@ main {
     }
 }
 
+.versus {
+    margin: 1vh;
+
+    img {
+        width: 155px;
+    }
+}
+
 .modal {
-    width: 320px;
-    height: 220px;
+    width: 200px;
+    height: 150px;
     position: fixed;
-    padding: 0.5rem;
+    padding: 1vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,7 +144,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 8px;
+    padding: 1vh;
 
     p {
         font-size: 25px;
@@ -159,15 +168,6 @@ main {
     transform: scale(1.1);
 }
 
-.versus {
-    margin: 1rem;
-
-    img {
-        width: 155px;
-        height: 155px;
-    }
-}
-
 .section {
     display: flex;
     justify-content: space-evenly;
@@ -180,10 +180,11 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 2.5rem;
+    padding: 2vh;
 }
 
 .choices button {
+    padding: 1vh;
     height: 150px;
     width: 150px;
     background-color: #BABFC4;
@@ -202,7 +203,7 @@ main {
 }
 
 .verdict {
-    padding: 2.5rem;
+    padding: 2vh;
     width: 562px;
     text-align: center;
     font-size: 30px;
@@ -213,10 +214,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding-top: 3vw;
     gap: 5px;
     max-width: 1632px;
     margin-inline: auto;
+    flex-grow: 1;
 
     p {
         font-size: 20px;
@@ -226,7 +228,232 @@ footer {
         height: 35px;
         margin: auto 0;
     }
+
+    a:hover {
+        animation: rotate 0.5s forwards;
+        transform: scale(1.1);
+    }
 }
+
+@media (width <=425px) {
+    header {
+        justify-content: center;
+
+        img {
+            width: 50px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    .game-round {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .score {
+        flex-direction: row;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .player img {
+        transform: rotate(115deg);
+    }
+
+    .computer img {
+        transform: rotate(-65deg);
+    }
+
+    .hand {
+        img {
+            height: 177.5px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .versus {
+        img {
+            width: 77.5px;
+        }
+    }
+
+    .choices button {
+        height: 75px;
+        width: 75px;
+
+        img {
+            height: 75px;
+        }
+    }
+
+    .verdict {
+        width: 281px;
+        font-size: 15px;
+    }
+
+    footer {
+        p {
+            font-size: 10px;
+        }
+
+        a img {
+            height: 17.5px;
+            margin: auto 0;
+        }
+    }
+}
+
+@media (425px < width <=1440px) {
+    header {
+        img {
+            width: 75px;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+    }
+
+    .game-round {
+        font-size: 25px;
+    }
+
+    .score {
+        img {
+            width: 37.5px;
+            height: 37.5px;
+        }
+    }
+
+    .hand {
+        img {
+            height: 266px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 27px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .versus {
+        img {
+            width: 116.25px;
+        }
+    }
+
+    .choices button {
+        height: 112.5px;
+        width: 112.5px;
+
+        img {
+            height: 112.5px;
+        }
+    }
+
+    .verdict {
+        width: 421.5px;
+        font-size: 22.5px;
+    }
+
+    footer {
+        p {
+            font-size: 15px;
+        }
+
+        a img {
+            height: 26.25px;
+            margin: auto 0;
+        }
+    }
+}
+
+@media (1344px < width <=1633px) {
+
+    header,
+    main,
+    footer {
+        max-width: 1344px;
+        margin-inline: auto;
+    }
+}
+
+@media (1056px < width <=1344px) {
+
+    header,
+    main,
+    footer {
+        max-width: 1056px;
+        margin-inline: auto;
+    }
+}
+
+@media (768px < width <=1056px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .score {
+        flex-direction: row;
+    }
+
+    .player img {
+        transform: rotate(115deg);
+    }
+
+    .computer img {
+        transform: rotate(-65deg);
+    }
+
+    header,
+    main,
+    footer {
+        max-width: 768px;
+        margin-inline: auto;
+    }
+}
+
+@media (425px < width <=768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .score {
+        flex-direction: row;
+    }
+
+    .player img {
+        transform: rotate(115deg);
+    }
+
+    .computer img {
+        transform: rotate(-65deg);
+    }
+
+    header,
+    footer {
+        padding: 3vh
+    }
+}
+
+
 
 @keyframes fade-in {
     0% {
@@ -255,5 +482,15 @@ footer {
 
     0% {
         opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
