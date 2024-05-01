@@ -12,7 +12,20 @@ const computerHand = document.querySelector("#computerHand");
 const computerPoints = document.querySelectorAll("#computerPoints img");
 const displaySentence = document.querySelector("#sentence");
 scoreReset.src = "./assets/images/fill.png";
-playGame();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loaderBG = document.querySelector(".loader");
+  const loaderIMG = document.createElement("img");
+  loaderIMG.src = "./assets/images/icon.png";
+  loaderIMG.classList.add("icon");
+  loaderBG.appendChild(loaderIMG);
+
+  window.onload = () => {
+    loaderBG.classList.add("hide");
+    playGame();
+  };
+});
+
 function playGame() {
   const rockBtn = document.querySelector("#rock");
   const paperBtn = document.querySelector("#paper");
