@@ -48,19 +48,19 @@ function playRound(playerChoice, computerChoice) {
 
 function handUI(playerChoice, computerChoice) {
   if (playerChoice === "rock") {
-    playerHand.src = "./assets/images/rock - left.png";
+    playerHand.src = "./assets/images/rock-left.png";
   } else if (playerChoice === "paper") {
-    playerHand.src = "./assets/images/paper - left.png";
+    playerHand.src = "./assets/images/paper-left.png";
   } else {
-    playerHand.src = "./assets/images/scissors - left.png";
+    playerHand.src = "./assets/images/scissors-left.png";
   }
 
   if (computerChoice === "rock") {
-    computerHand.src = "./assets/images/rock - right.png";
+    computerHand.src = "./assets/images/rock-right.png";
   } else if (computerChoice === "paper") {
-    computerHand.src = "./assets/images/paper - right.png";
+    computerHand.src = "./assets/images/paper-right.png";
   } else {
-    computerHand.src = "./assets/images/scissors - right.png";
+    computerHand.src = "./assets/images/scissors-right.png";
   }
 }
 
@@ -139,8 +139,8 @@ function reset() {
   gameRound = 0;
 
   gameRoundText.textContent = "Start a round!";
-  playerHand.src = "./assets/images/rock - left.png";
-  computerHand.src = "./assets/images/rock - right.png";
+  playerHand.src = "./assets/images/rock-left.png";
+  computerHand.src = "./assets/images/rock-right.png";
   displaySentence.textContent =
     "The game starts as soon as you press a button!";
 
