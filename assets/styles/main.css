@@ -228,6 +228,7 @@ footer {
         justify-content: center;
 
         img {
+            height: 50px;
             width: 50px;
         }
 
@@ -263,6 +264,7 @@ footer {
 
     .hand {
         img {
+            width: 93px;
             height: 177.5px;
             margin: 0 auto;
         }
@@ -276,6 +278,7 @@ footer {
 
     .versus {
         img {
+            height: 77.5px;
             width: 77.5px;
         }
     }
@@ -285,6 +288,7 @@ footer {
         width: 75px;
 
         img {
+            width: 36.6px;
             height: 75px;
         }
     }
@@ -301,6 +305,7 @@ footer {
 
         a img {
             height: 17.5px;
+            width: 17.5px;
             margin: auto 0;
         }
     }
@@ -309,6 +314,7 @@ footer {
 @media (425px < width <=1440px) {
     header {
         img {
+            height: 75px;
             width: 75px;
         }
 
@@ -330,6 +336,7 @@ footer {
 
     .hand {
         img {
+            width: 139.36px;
             height: 266px;
             margin: 0 auto;
         }
@@ -344,6 +351,7 @@ footer {
     .versus {
         img {
             width: 116.25px;
+            height: 116.25px;
         }
     }
 
@@ -352,6 +360,7 @@ footer {
         width: 112.5px;
 
         img {
+            width: 54.9px;
             height: 112.5px;
         }
     }
@@ -368,6 +377,7 @@ footer {
 
         a img {
             height: 26.25px;
+            width: 26.25px;
             margin: auto 0;
         }
     }
