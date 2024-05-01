@@ -60,11 +60,11 @@ main {
 }
 
 .player img {
-    transform: rotate(90deg);
+    rotate: 90deg;
 }
 
 .computer img {
-    transform: rotate(-90deg);
+    rotate: -90deg;
 }
 
 .hand {
@@ -148,13 +148,13 @@ main {
     padding: 10px;
     font-weight: 500;
     font-size: 20px;
-    transition: transform 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
 }
 
 .modal-content button:hover {
     cursor: pointer;
     background: #75808a;
-    transform: scale(1.1);
+    scale: 1.1;
 }
 
 .section {
@@ -179,7 +179,7 @@ main {
     background-color: #BABFC4;
     border: 5px solid #0c0d0e;
     border-radius: 25px;
-    transition: transform 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
 
     img {
         height: 150px;
@@ -188,7 +188,7 @@ main {
 
 .choices button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    scale: 1.1;
 }
 
 .verdict {
@@ -255,11 +255,11 @@ footer {
     }
 
     .player img {
-        transform: rotate(115deg);
+        rotate: 115deg;
     }
 
     .computer img {
-        transform: rotate(-65deg);
+        rotate: -65deg;
     }
 
     .hand {
@@ -413,11 +413,11 @@ footer {
     }
 
     .player img {
-        transform: rotate(115deg);
+        rotate: 115deg;
     }
 
     .computer img {
-        transform: rotate(-65deg);
+        rotate: -65deg;
     }
 
     header,
@@ -438,16 +438,58 @@ footer {
     }
 
     .player img {
-        transform: rotate(115deg);
+        rotate: 115deg;
     }
 
     .computer img {
-        transform: rotate(-65deg);
+        rotate: -65deg;
     }
 
     header,
     footer {
         padding: 3vh
+    }
+}
+
+.loader {
+    background-color: #464d53;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-out;
+}
+
+.icon {
+    animation: rotate-out-in 3s infinite;
+}
+
+.hide {
+    animation: vanish 1s forwards;
+}
+
+@keyframes rotate-out-in {
+    0% {
+        rotate: -360deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -485,10 +527,10 @@ footer {
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        rotate: 0deg;
     }
 
     100% {
-        transform: rotate(360deg);
+        rotate: 360deg;
     }
 }
