@@ -7,7 +7,6 @@ a::after {
     margin: 0;
     font-family: "Poppins", sans-serif;
     user-select: none;
-    transition: all 0.5s ease-in-out;
 }
 
 img {
@@ -221,7 +220,6 @@ footer {
 
     a:hover {
         animation: rotate 0.5s forwards;
-        transform: scale(1.1);
     }
 }
 
