@@ -203,7 +203,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3vw;
+    padding-top: 3vh;
     gap: 5px;
     max-width: 1632px;
     margin-inline: auto;
