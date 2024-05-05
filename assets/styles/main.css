@@ -48,8 +48,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 450px;
     flex-grow: 0;
+    padding: 1vh;
 }
 
 .score {
@@ -59,12 +59,18 @@ main {
     gap: 1vh;
 }
 
-.player img {
-    rotate: 90deg;
+.player {
+    img {
+        rotate: 90deg;
+    }
 }
 
-.computer img {
-    rotate: -90deg;
+.computer {
+    display: flex;
+
+    img {
+        rotate: -90deg;
+    }
 }
 
 .hand {
@@ -242,7 +248,7 @@ footer {
     }
 
     .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .score {
@@ -255,24 +261,31 @@ footer {
     }
 
     .player img {
-        rotate: 115deg;
+        rotate: 30deg;
     }
 
-    .computer img {
-        rotate: -65deg;
+    .computer {
+        flex-direction: row-reverse !important;
+
+        img {
+            rotate: 210deg;
+        }
     }
 
     .hand {
+        flex-direction: row;
+        align-items: center;
+
         img {
             width: 93px;
             height: 177.5px;
-            margin: 0 auto;
         }
 
         p {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
+            width: 35vw;
         }
     }
 
@@ -281,6 +294,12 @@ footer {
             height: 77.5px;
             width: 77.5px;
         }
+    }
+
+    .section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 0;
     }
 
     .choices button {
