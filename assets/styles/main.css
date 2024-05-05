@@ -314,9 +314,11 @@ footer {
 
     .verdict {
         width: 281px;
-        height: 68.5px;
         font-size: 15px;
         
+        p {
+            height: 34px;
+        }
     }
 
     footer {
