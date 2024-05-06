@@ -2,8 +2,9 @@ document.getElementById("currentYear").textContent = new Date().getFullYear();
 let playerScore = 0,
   computerScore = 0,
   gameRound = 0;
+
 const scoreReset = document.createElement("img");
-const gameRoundText = document.querySelector("h2");
+const gameRoundText = document.querySelector("#gameRound");
 const playerPoints = document.querySelectorAll("#playerPoints img");
 const playerHand = document.querySelector("#playerHand");
 const modalGameOver = document.querySelector("dialog");
