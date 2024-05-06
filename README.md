@@ -4,7 +4,9 @@ Play Janken right now: https://zen-pb.github.io/janken/
 
 A game where you have a 'Janken' match with a computer that randomly generates its choice (rock, paper, or scissors). The winner is the first to reach a score of three wins.
 
-![image](https://github.com/zen-pb/janken/assets/111935236/7348329d-f46f-49c3-8f58-19a29dff2f35)
+<div align="center">
+   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHNlMzUwOWI5OXVkNnBnbmI4dzg4eGJweWtvMTBoYWZvYWVjOTZ4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QQCkc1Nfp3aB8p3rlQ/giphy.gif" alt="gameplay"> 
+</div>
 
 ## Description
 
@@ -16,7 +18,19 @@ A game where you have a 'Janken' match with a computer that randomly generates i
 - Clear indication of the winner of each round.
 - Play again option when the game concludes.
 
-![janken](https://github.com/zen-pb/janken/assets/111935236/297926a1-1981-4894-be1d-f1189fd8ca41)
+## User Experience
+- **Responsive Design:** The game interface adjusts seamlessly to desktop, tablet, and mobile screens, ensuring a smooth playing experience on any device.
+
+<div align="center">
+   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXRjMGh2bm9jZDhsNGlkOTRvNDdlMjVlaGpmOHFnZ292YnpldzBvYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kUfPhHJZACsL4ZXYD7/giphy.gif" alt="gameplay"> 
+</div>
+
+  
+- **Loading Screen:** Provides visual feedback while the game assets load, enhancing the overall user experience. 
+
+<div align="center">
+   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNtaDVmMDNtMTFnbngxdzk1bm85ajM1ZWJ0bHBnbjN4dGJ5dWUwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qALIUnjsN7gZ3GVu2f/giphy.gif" alt="Loading screen animation"> 
+</div>
 
 ## Problem Solving Approach
 
