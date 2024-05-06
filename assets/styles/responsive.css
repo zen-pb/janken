@@ -1,0 +1,334 @@
+@media (width <=360px) {
+    .container {
+        gap: 15vw;
+
+        .computer {
+            rotate: 210deg;
+        }
+
+        .player {
+            rotate: 30deg;
+        }
+    }
+}
+
+@media (500px <=width <=1024px) {
+    header {
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+        p {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    }
+
+    .game-round {
+        text-align: center;
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    .container {
+        .computer {
+            rotate: 225deg;
+        }
+
+        .player {
+            rotate: 45deg;
+        }
+    }
+
+    .scoreboard {
+        gap: 10px;
+
+        p {
+            width: 133px;
+            font-size: 28px;
+        }
+    }
+
+    .score img {
+        width: 37.5px;
+        height: 37.5px;
+    }
+
+    .hand {
+        width: 104.52px;
+        height: 200px;
+    }
+
+    .versus {
+        height: 116.25px;
+
+        img {
+            width: 116.25px;
+            height: 116.25px;
+        }
+    }
+
+    .section {
+        p {
+            font-size: 24px;
+        }
+    }
+
+    .choices button {
+        width: 112.5px;
+        height: 112.5px;
+
+        img {
+            width: 54.89px;
+            height: 112.5px;
+        }
+    }
+
+    footer {
+        font-size: 16px;
+
+        a {
+            height: 26.25px;
+
+            img {
+                width: 26.25px;
+                height: 26.25px;
+            }
+        }
+    }
+}
+
+@media (1024px < width <=1440px) {
+    header {
+        justify-content: flex-start;
+        margin-left: 7vw;
+
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+        p {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    }
+
+    .game-round {
+        text-align: center;
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .container {
+        flex-direction: row-reverse;
+        gap: 7vw;
+
+        .computer {
+            rotate: 270deg;
+        }
+
+        .player {
+            rotate: 90deg;
+        }
+    }
+
+    #playerContainer {
+        flex-direction: row;
+    }
+
+    .scoreboard {
+        gap: 10px;
+
+        p {
+            width: 133px;
+            font-size: 28px;
+        }
+    }
+
+    #computerScoreboard {
+        flex-direction: column;
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        img {
+            width: 37.5px;
+            height: 37.5px;
+        }
+    }
+
+    .hand {
+        width: 139.36px;
+        height: 266px;
+    }
+
+    .versus {
+        height: 116.25px;
+
+        img {
+            width: 116.25px;
+            height: 116.25px;
+        }
+    }
+
+    .section {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+
+        p {
+            font-size: 24px;
+            width: 380px;
+        }
+    }
+
+    .choices button {
+        width: 112.5px;
+        height: 112.5px;
+
+        img {
+            width: 54.89px;
+            height: 112.5px;
+        }
+    }
+
+    footer {
+        font-size: 16px;
+
+        a {
+            height: 26.25px;
+
+            img {
+                width: 26.25px;
+                height: 26.25px;
+            }
+        }
+    }
+}
+
+@media (1440px < width <=2560px) {
+    header {
+        justify-content: flex-start;
+        margin-left: 7vw;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        p {
+            font-size: 64px;
+            font-weight: bold;
+        }
+    }
+
+    .game-round {
+        text-align: center;
+        font-size: 54px;
+        font-weight: bold;
+    }
+
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .container {
+        flex-direction: row-reverse;
+        gap: 7vw;
+
+        .computer {
+            rotate: 270deg;
+        }
+
+        .player {
+            rotate: 90deg;
+        }
+    }
+
+    #playerContainer {
+        flex-direction: row;
+    }
+
+    .scoreboard {
+        gap: 10px;
+
+        p {
+            width: 170px;
+            font-size: 36px;
+        }
+    }
+
+    #computerScoreboard {
+        flex-direction: column;
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .hand {
+        width: 186px;
+        height: 355px;
+    }
+
+    .versus {
+        height: 155px;
+
+        img {
+            width: 155px;
+            height: 155px;
+        }
+    }
+
+    .section {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+
+        p {
+            font-size: 30px;
+            width: 521px;
+        }
+    }
+
+    .choices button {
+        width: 150px;
+        height: 150px;
+
+        img {
+            width: 75.19px;
+            height: 150px;
+        }
+    }
+
+    footer {
+        font-size: 20px;
+
+        a {
+            height: 35px;
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+
