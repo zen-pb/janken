@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const loaderBG = document.querySelector(".loader");
   const loaderIMG = document.createElement("img");
   loaderIMG.src = "./assets/images/icon.png";
+  loaderIMG.setAttribute("width", "100");
+  loaderIMG.setAttribute("height", "100");
   loaderIMG.classList.add("icon");
   loaderBG.appendChild(loaderIMG);
 
