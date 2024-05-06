@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *,
 *::before,
@@ -13,91 +13,164 @@ img {
     pointer-events: none;
 }
 
+html,
 body {
-    min-height: 100vh;
-    overflow-x: hidden;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     background-color: #D6D9DC;
 }
 
 header {
     display: flex;
     align-items: center;
-    max-width: 1632px;
-    margin-inline: auto;
-    padding-top: 3vh;
+    justify-content: center;
+    padding: 2vh 0;
 
-    h1 {
-        font-size: 64px;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    p {
+        font-size: 32px;
+        font-weight: bold;
     }
 }
 
 .game-round {
     text-align: center;
-    padding: 1vh;
-    font-size: 36px;
-    max-width: 1632px;
-    margin-inline: auto;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 main {
-    max-width: 1632px;
-    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-grow: 0;
-    padding: 1vh;
+    gap: 25vw;
+
+    .computer {
+        rotate: 220deg;
+    }
+
+    .player {
+        rotate: 40deg;
+    }
 }
 
-.score {
+#playerContainer {
+    flex-direction: row-reverse;
+}
+
+.scoreboard {
     display: flex;
     flex-direction: column;
-    padding: 1vh;
-    gap: 1vh;
-}
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 
-.player {
-    img {
-        rotate: 90deg;
+    p {
+        width: 85px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
     }
 }
 
-.computer {
-    display: flex;
+#computerScoreboard {
+    flex-direction: column-reverse;
+}
 
-    img {
-        rotate: -90deg;
-    }
+.score img {
+    width: 25px;
+    height: 25px;
 }
 
 .hand {
-    display: flex;
-    flex-direction: column;
-    width: 360px;
-
-    img {
-        margin: 0 auto;
-    }
-
-    p {
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-    }
+    width: 93px;
+    height: 177.5px;
 }
 
 .versus {
-    margin: 1vh;
+    height: 77.5px;
 
     img {
-        width: 155px;
+        width: 77.5px;
+        height: 77.5px;
     }
 }
 
-.modal {
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1vh;
+    margin-bottom: 2vh;
+
+    p {
+        padding: 1vh;
+    }
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.choices button {
+    width: 75px;
+    height: 75px;
+    padding: 1vh;
+    background-color: #BABFC4;
+    border: 5px solid #0c0d0e;
+    border-radius: 25px;
+    transition: scale 0.2s ease-in-out;
+
+    img {
+        width: 36.6px;
+        height: 75px;
+    }
+}
+
+.choices button:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 10px;
+    text-align: center;
+
+    a {
+        height: 17.5px;
+
+        img {
+            width: 17.5px;
+            height: 17.5px;
+        }
+    }
+
+    a:hover {
+        animation: rotate .5s forwards;
+    }
+}
+
+dialog {
     width: 200px;
     height: 150px;
     position: fixed;
@@ -105,49 +178,27 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     background: #f1f2f3;
     text-align: center;
     border-radius: 25px;
     border: none;
     transition: transform 0.2s ease-in-out;
+    font-weight: 700;
+    font-size: 25px;
 }
 
-.modal::backdrop {
-    background: #0c0d0e;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal[open] {
-    animation: fade-in 200ms forwards;
-}
-
-.modal[open]::backdrop {
-    animation: fade-in-backdrop 200ms forwards;
-}
-
-.modal::backdrop {
-    background: #0c0d0e;
-    opacity: .2;
-    pointer-events: none;
-}
-
-.modal-content {
+.dialog-content {
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
-    padding: 1vh;
-
-    p {
-        font-size: 25px;
-        font-weight: 700;
-    }
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-content button {
+dialog button {
     border: none;
     border-radius: 9px;
     background: #D6D9DC;
@@ -157,321 +208,10 @@ main {
     transition: scale 0.2s ease-in-out;
 }
 
-.modal-content button:hover {
+dialog button:hover {
     cursor: pointer;
     background: #75808a;
     scale: 1.1;
-}
-
-.section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
-}
-
-.choices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2vh;
-}
-
-.choices button {
-    padding: 1vh;
-    height: 150px;
-    width: 150px;
-    background-color: #BABFC4;
-    border: 5px solid #0c0d0e;
-    border-radius: 25px;
-    transition: scale 0.2s ease-in-out;
-
-    img {
-        height: 150px;
-    }
-}
-
-.choices button:hover {
-    cursor: pointer;
-    scale: 1.1;
-}
-
-.verdict {
-    padding: 2vh;
-    width: 562px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3vh;
-    gap: 5px;
-    max-width: 1632px;
-    margin-inline: auto;
-    flex-grow: 1;
-
-    p {
-        font-size: 20px;
-    }
-
-    a img {
-        height: 35px;
-        margin: auto 0;
-    }
-
-    a:hover {
-        animation: rotate 0.5s forwards;
-    }
-}
-
-@media (width <=425px) {
-    header {
-        justify-content: center;
-
-        img {
-            height: 50px;
-            width: 50px;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-    }
-
-    .game-round {
-        font-size: 16px;
-    }
-
-    .container {
-        flex-direction: column-reverse;
-    }
-
-    .score {
-        flex-direction: row;
-
-        img {
-            width: 25px;
-            height: 25px;
-        }
-    }
-
-    .player img {
-        rotate: 30deg;
-    }
-
-    .computer {
-        flex-direction: row-reverse !important;
-
-        img {
-            rotate: 210deg;
-        }
-    }
-
-    .hand {
-        flex-direction: row;
-        align-items: center;
-
-        img {
-            width: 93px;
-            height: 177.5px;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            width: 35vw;
-        }
-    }
-
-    .versus {
-        img {
-            height: 77.5px;
-            width: 77.5px;
-        }
-    }
-
-    .section {
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap: 0;
-    }
-
-    .choices button {
-        height: 75px;
-        width: 75px;
-
-        img {
-            width: 36.6px;
-            height: 75px;
-        }
-    }
-
-    .verdict {
-        width: 281px;
-        font-size: 15px;
-        
-        p {
-            height: 34px;
-        }
-    }
-
-    footer {
-        p {
-            font-size: 10px;
-        }
-
-        a img {
-            height: 17.5px;
-            width: 17.5px;
-            margin: auto 0;
-        }
-    }
-}
-
-@media (425px < width <=1440px) {
-    header {
-        img {
-            height: 75px;
-            width: 75px;
-        }
-
-        h1 {
-            font-size: 48px;
-        }
-    }
-
-    .game-round {
-        font-size: 25px;
-    }
-
-    .score {
-        img {
-            width: 37.5px;
-            height: 37.5px;
-        }
-    }
-
-    .hand {
-        img {
-            width: 139.36px;
-            height: 266px;
-            margin: 0 auto;
-        }
-
-        p {
-            font-size: 27px;
-            font-weight: bold;
-            text-align: center;
-        }
-    }
-
-    .versus {
-        img {
-            width: 116.25px;
-            height: 116.25px;
-        }
-    }
-
-    .choices button {
-        height: 112.5px;
-        width: 112.5px;
-
-        img {
-            width: 54.9px;
-            height: 112.5px;
-        }
-    }
-
-    .verdict {
-        width: 421.5px;
-        font-size: 22.5px;
-    }
-
-    footer {
-        p {
-            font-size: 15px;
-        }
-
-        a img {
-            height: 26.25px;
-            width: 26.25px;
-            margin: auto 0;
-        }
-    }
-}
-
-@media (1344px < width <=1633px) {
-
-    header,
-    main,
-    footer {
-        max-width: 1344px;
-        margin-inline: auto;
-    }
-}
-
-@media (1056px < width <=1344px) {
-
-    header,
-    main,
-    footer {
-        max-width: 1056px;
-        margin-inline: auto;
-    }
-}
-
-@media (768px < width <=1056px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .score {
-        flex-direction: row;
-    }
-
-    .player img {
-        rotate: 115deg;
-    }
-
-    .computer img {
-        rotate: -65deg;
-    }
-
-    header,
-    main,
-    footer {
-        max-width: 768px;
-        margin-inline: auto;
-    }
-}
-
-@media (425px < width <=768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .score {
-        flex-direction: row;
-    }
-
-    .player img {
-        rotate: 115deg;
-    }
-
-    .computer img {
-        rotate: -65deg;
-    }
-
-    header,
-    footer {
-        padding: 3vh
-    }
 }
 
 .loader {
@@ -495,6 +235,16 @@ footer {
     animation: vanish 1s forwards;
 }
 
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
 @keyframes rotate-out-in {
     0% {
         rotate: -360deg;
@@ -513,47 +263,5 @@ footer {
     100% {
         opacity: 0;
         visibility: hidden;
-    }
-}
-
-
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in-backdrop {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: .2;
-    }
-}
-
-@keyframes fade-out {
-    100% {
-        opacity: 0;
-    }
-
-    0% {
-        opacity: 1;
-    }
-}
-
-@keyframes rotate {
-    0% {
-        rotate: 0deg;
-    }
-
-    100% {
-        rotate: 360deg;
     }
 }
