@@ -2,23 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, height=device-height ,initial-scale=1.0" />
-    <meta property="og:title" content="Janken" />
-    <meta
-      property="og:description"
-      content='A game where you have a "Janken" match with a computer that randomly generates its choice (rock, paper, or scissors).'
-    />
-    <meta
-      property="og:image"
-      content="https://github.com/zen-pb/janken/assets/111935236/7348329d-f46f-49c3-8f58-19a29dff2f35"
-    />
-    <meta
-      name="description"
-      content="Challenge the computer in a classic Janken showdown. Can you be the first to win three rounds?"
-    />
-    <link rel="icon" href="./assets/images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-    <title>Janken</title>
+    <link rel="stylesheet" href="./assets/styles/responsive.css" />
+    <title>Document</title>
   </head>
   <body>
     <header>
@@ -28,120 +15,115 @@
         height="100"
         alt="Janken Logo"
       />
-      <h1>JANKEN</h1>
+      <p>JANKEN</p>
     </header>
+
+    <div id="gameRound" class="game-round">Start a round!</div>
+
     <main>
-      <div class="game-round">
-        <h2 id="gameRound">Start a round!</h2>
-      </div>
       <div class="container">
-        <div id="playerPoints" class="score">
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-        </div>
-        <div class="player hand">
-          <img
-            id="playerHand"
-            src="./assets/images/rock-left.png"
-            width="186"
-            height="355"
-            alt="player hand"
-          />
-          <p>Player</p>
-        </div>
-        <dialog class="modal" id="modal">
-          <div class="modal-content">
-            <p id="verdict"></p>
-            <button>Play again</button>
+        <div id="computerScoreboard" class="scoreboard">
+          <div id="computerPoints" class="score">
+            <img
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
+            />
+            <img
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
+            />
+            <img
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
+            />
           </div>
-        </dialog>
-        <div class="versus">
-          <img
-            src="./assets/images/versus.png"
-            width="155"
-            height="155"
-            alt="versus"
-          />
-        </div>
-        <div class="computer hand">
-          <img
-            id="computerHand"
-            src="./assets/images/rock-right.png"
-            width="186"
-            height="355"
-            alt="computer hand"
-          />
           <p>Computer</p>
         </div>
-        <div id="computerPoints" class="score">
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-          <img
-            src="./assets/images/empty.png"
-            width="50"
-            height="50"
-            alt="score"
-          />
-        </div>
+        <img
+          id="computerHand"
+          class="computer hand"
+          src="./assets/images/rock-right.png"
+          width="186"
+          height="355"
+          alt="hand-rock"
+        />
       </div>
-      <div class="section">
-        <div class="choices">
-          <button id="rock">
+
+      <div class="versus">
+        <img src="./assets/images/versus.png" alt="versus" />
+      </div>
+
+      <div id="playerContainer" class="container">
+        <div class="scoreboard">
+          <div id="playerPoints" class="score">
             <img
-              src="./assets/images/rock-right.png"
-              width="78.58"
-              height="150"
-              alt="rock"
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
             />
-          </button>
-          <button id="paper">
             <img
-              src="./assets/images/paper-right.png"
-              width="75.2"
-              height="150"
-              alt="paper"
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
             />
-          </button>
-          <button id="scissors">
             <img
-              src="./assets/images/scissors-right.png"
-              width="65.91"
-              height="150"
-              alt="scissors"
+              src="./assets/images/empty.png"
+              width="50"
+              height="50"
+              alt="score-empty"
             />
-          </button>
+          </div>
+          <p>Player</p>
         </div>
-        <div class="verdict">
-          <p id="sentence">The game starts as soon as you press a button!</p>
-        </div>
+        <img
+          id="playerHand"
+          class="player hand"
+          src="./assets/images/rock-left.png"
+          width="186"
+          height="355"
+          alt="hand-rock"
+        />
       </div>
     </main>
+
+    <div class="section">
+      <p id="sentence">The game starts as soon as you press a button!</p>
+      <div class="choices">
+        <button id="rock">
+          <img
+            src="./assets/images/rock-right.png"
+            width="78.58"
+            height="150"
+            alt="rock"
+          />
+        </button>
+        <button id="paper">
+          <img
+            src="./assets/images/paper-right.png"
+            width="75.2"
+            height="150"
+            alt="rock"
+          />
+        </button>
+        <button id="scissors">
+          <img
+            src="./assets/images/scissors-right.png"
+            width="65.91"
+            height="150"
+            alt="rock"
+          />
+        </button>
+      </div>
+    </div>
+
     <footer>
       <p>
         Copyright ©
@@ -157,7 +139,15 @@
         />
       </a>
     </footer>
+    <dialog>
+      <div class="dialog-content">
+        <p id="verdict"></p>
+        <button>Play again</button>
+      </div>
+    </dialog>
+
     <div class="loader"></div>
+
     <script src="./assets/src/janken.js"></script>
   </body>
 </html>
