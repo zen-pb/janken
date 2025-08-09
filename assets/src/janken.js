@@ -1,4 +1,3 @@
-document.getElementById("currentYear").textContent = new Date().getFullYear();
 let playerScore = 0,
   computerScore = 0,
   gameRound = 0;
